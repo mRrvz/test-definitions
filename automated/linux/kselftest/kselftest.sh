@@ -132,6 +132,8 @@ parse_output() {
 }
 
 install() {
+    echo ">>>>9999>>>>"
+    echo "${SKIP_INSTALL}"
     dist_name
     # shellcheck disable=SC2154
     case "${dist}" in
@@ -154,6 +156,7 @@ if [ -d "${KSELFTEST_PATH}" ]; then
 else
     # Fetch whatever we have been aimed at, assuming only that it can
     # be handled by "tar". Do not assume anything about the compression.
+    echo "123>>>>"
     wget "${TESTPROG_URL}" -O "${TESTPROG}"
     tar -xaf "${TESTPROG}"
     # shellcheck disable=SC3044
